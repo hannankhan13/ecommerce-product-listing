@@ -1,0 +1,103 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+}
+
+.controls {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.control label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+/* 🔽 Professional dropdown */
+.control select {
+  min-width: 150px;
+  padding: 9px 36px 9px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+
+  font-size: 14px;
+  color: #111827;
+  cursor: pointer;
+
+  /* remove default arrow */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* custom arrow */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 20 20'%3E%3Cpath fill='%236b7280' d='M5.5 7.5L10 12l4.5-4.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 14px;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.control select:hover {
+  border-color: #9ca3af;
+  background-color: #f9fafb;
+}
+
+.control select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  background-color: #ffffff;
+}
+
+.control select option {
+  cursor: pointer;
+}
+
+.control select:disabled {
+  cursor: not-allowed;
+  background-color: #f3f4f6;
+  color: #9ca3af;
+}
+
+.control select option {
+  font-size: 14px;
+  color: #111827;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.control select option:disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.control select option:checked {
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .control select {
+    width: 100%;
+  }
+}
